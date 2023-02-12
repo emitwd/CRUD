@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- css base -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css' ) }}">
+
+    {% block customcss %}
+        
+    {% endblock %}
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="cabezera_principal">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <h3>CRUD</h3>
+                </a>
+            </div>
+            <ul class="nav_menu">
+                <li><a href="/" id="activo">Inicio</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/cuenta">Cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    {% block main %}
+    {% endblock %}
+    
+    
+
+
+    <footer class="pie_principal">
+        <p>CRUD - CREADO POR EMI 🍻</p>
+        <ul class="footer_menu">
+            <li><a href="#"><img src="{{ url_for('static', filename='img/icons/whatsapp.svg') }}"></a></li>
+            <li><a href="#"><img src="{{ url_for('static', filename='img/icons/twitter.svg') }}"></a></li>
+            <li><a href="#"><img src="{{ url_for('static', filename='img/icons/tiktok.svg') }}"></a></li>
+            <li><a href="#"><img src="{{ url_for('static', filename='img/icons/youtube.svg') }}"></a></li>
+            <li><a href="#"><img src="{{ url_for('static', filename='img/icons/github.svg') }}"></a></li>
+        </ul>
+    </footer>
+
+    <!-- tema -->
+    <script src="{{  url_for('static' , filename='js/main.js')  }}"></script>
+</body>
+
+</html>

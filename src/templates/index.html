@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block customcss %}        
+<!-- css index -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index/main.css' ) }}">
+{% endblock %}
+
+
+{% block main %}
+<main class="contenedor_principal">
+<section class="productos">
+    <div class="producto">
+        <img src="{{ url_for('static', filename='img/tenis/tenis_1.jpg')}}" alt="" srcset="">
+        <div class="desc">
+            <p>Tenis adidas</p>
+        </div>
+    </div>
+
+</section>
+    
+</main>
+{% endblock %}
