@@ -29,7 +29,17 @@
             <ul class="nav_menu">
                 <li><a href="/" id="activo">Inicio</a></li>
                 <li><a href="/productos">Productos</a></li>
+                {% if 'username' in session %}
+
                 <li><a href="/cuenta">Cuenta</a></li>
+                
+                {% else %}
+
+                <li><a href="/cuenta">Registrarme</a></li>
+                
+                {% endif %}
+
+
             </ul>
         </nav>
     </header>
